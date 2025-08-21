@@ -19,18 +19,15 @@ const corsOptions = {
     origin:'http://localhost:5173',
     credentials:true
 }
-// app.use(cors(corsOptions))
+app.use(cors(corsOptions))
 
-// //apis
-// app.use("/api/v1/user",userRoute);
-// app.use("/api/v1/company",companyRoutes);
-// app.use("/api/v1/job",jobRoutes);
-// app.use("/api/v1/application",applicationRoutes);
+//apis
+app.use("/api/v1/user",userRoute);
+app.use("/api/v1/company",companyRoutes);
+app.use("/api/v1/job",jobRoutes);
+app.use("/api/v1/application",applicationRoutes);
 
 
-app.get("/", (req, res) => {
-  res.send("Backend is running ✅");
-});
 
 
 // "http://localhost:8000/api/v1/register"
