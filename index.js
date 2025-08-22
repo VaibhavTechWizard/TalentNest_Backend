@@ -11,6 +11,10 @@ import applicationRoutes from "./routes/application.route.js"
 dotenv.config({})
 const app = express();
 
+app.get("/", (req, res) => {
+  res.send("Backend is running!");
+});
+
 //middleware
 app.use(express.json());//to send the data in json form
 app.use(express.urlencoded({extended:true}))
